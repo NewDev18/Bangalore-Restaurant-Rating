@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+</head>
+<body>
+    <h2>Input Form</h2>
+    <form action="/predict" method="post">
+        <label for="online_order">Online Order (0:Yes/1:No):</label>
+        <input type="number" id="online_order" name="online_order" required><br><br>
+
+        <label for="book_table">Book Table (0:Yes/1:No):</label>
+        <input type="number" id="book_table" name="book_table" required><br><br>
+
+        <label for="votes">Votes :</label>
+        <input type="number" id="votes" name="votes" required><br><br>
+
+        <label for="location">Location (From 0 to 110):</label>
+        <input type="number" id="location" name="location" required><br><br>
+
+        <label for="rest_type">Restaurant Type (0 to 36):</label>
+        <input type="number" id="rest_type" name="rest_type" required><br><br>
+
+        <label for="cuisines">Cuisines (How many):</label>
+        <input type="number" step="any" id="cuisines" name="cuisines" required><br><br>
+
+        <label for="cost">Cost :</label>
+        <input type="number" step="any" id="cost" name="cost" required><br><br>
+        
+        <input type="submit" value="Submit">
+
+        <h5>
+            Restauant rating is:
+        </h5>{{prediction}}
+
+    </form>
+</body>
+</html>
