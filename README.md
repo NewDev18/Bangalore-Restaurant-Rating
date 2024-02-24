@@ -39,6 +39,8 @@ We will try to reduce Mean Square Error ie **MSE** as minimum as possible. So it
 ## 2. Data Acquire:
 aource : https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants
 
+<img src="Zomato-columns.png">
+
 ## Model Compare
 
 |                      Model                      |    MSE    |
