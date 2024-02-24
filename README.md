@@ -32,31 +32,22 @@ We need to predict rating based on different parameters like Average_cost for tw
 ## 1.4 Machine Learning Formulation
 Here we suppose to predicted rating of restaurant, so it is basically **Regression** problem.
 
-## 1.5 Perfomance Metric
-We will try to reduce Mean Square Error ie **MSE** as minimum as possible. So it is **Regression** problem reducing **MSE**.
-- Ideal MSE is 0.
-
 ## 2. Data Acquire:
 aource : https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants
 
 <img src="Zomato-columns.jpg">
 
-## Model Compare
+# Conclusion 💡
 
-|                      Model                      |    MSE    |
-|  ---------------------------------------------- | --------- |
-|         Random Model                            | 2.12      |
-|         SGD Regressor 7 ONEHOT Features         | 8.091e+30 |
-|      SGD Regressor Response coded Features      | 6.926e+29 |
-|         SGD Regressor 5 ONEHOT Features         | 2.069e+28 |
-|       Linear Regression 5 ONEHOT Features       |   0.1278  |
-|    Random Forest Regressor 5 ONEHOT Features    |  0.03485  |
-|       Linear Regression 7 ONEHOT Features       |  0.04308  |
-|    Random Forest Regressor 7 ONEHOT Features    |  0.01404  |
-|    Linear Regression Response coded Features    |  0.00948  |
-| Random Forest Regressor Response coded Features |  0.00353  |
-|     NLP Feature - BoW Random Forest Regressor     |  0.045  |
-|                 NLP Feature - LSTM                |   0.05  |
-|                 NLP Feature - GRU                 |  0.044  |
-|                  All features NN                  |  0.106  |
+- Most Restaurants offer options for online order and delivery.
+- Most restaurants don't offer table booking.
+- From the analysis, most of the ratings are within 3.5 and 4.5.
+- From the analysis. we can see that most of the restaurants located in 'Koramangala 5th Block' , 'BTM' & 'Indiranagar'.Then least restaurants are located 'KR Puram' , 'Kanakapura' , 'Magadi Road'. 'Casual Dining' , 'Quick Bites' , 'Cafe' ,
+- 'Dessert Parlor' are the most common types of restaurant.And 'Food Court', 'Casual Dining' ,
+- 'Dhaba' are the least common.
+- From the analysis, pasta & Pizza most famous food in bangalore restaurants.
+- From the analysis, we can see that North Indian Cuisines are most famous in bangalore restaurants.
+- Two main service types are Delivery and Dine-out.
+- From the analysis, we can see that 'Onesta' , 'Truffles' & 'Empire Restaurant' are highly voted restaurants.
+
 
