@@ -6,7 +6,7 @@
     <title>Input Form</title>
 </head>
 <body>
-    <h2>Input Form</h2>
+    <h2>Restaurant Rating Prediction</h2>
     <form action="/predict" method="post">
         <label for="online_order">Online Order (0:Yes/1:No):</label>
         <input type="number" id="online_order" name="online_order" required><br><br>
@@ -17,11 +17,75 @@
         <label for="votes">Votes :</label>
         <input type="number" id="votes" name="votes" required><br><br>
 
-        <label for="location">Location (From 0 to 110):</label>
-        <input type="number" id="location" name="location" required><br><br>
+        <label for="location">Location :</label>
+        <select id="location" name="location">
+            <option value="1">Banashankari</option>
+            <option value="2">Basavanagudi</option>
+            <option value="3">Mysore Road</option>
+            <option value="4">Jayanagar</option>
+            <option value="5">Kumaraswamy</option>
+            <option value="6">Rajarajeshwari Nagar</option>
+            <option value="7">Vijay Nagar</option>
+            <option value="8">Uttarahalli</option>
+            <option value="9">JP Nagar</option>
+            <option value="10">South Bangalore</option>
+            <option value="11">City Market</option>
+            <option value="12">Nagarbhavi</option>
+            <option value="13">Bannerghatta Road</option>
+            <option value="14">BTM</option>
+            <option value="15">Kanakapura Road</option>
+            <option value="16">Bommanahalli</option>
+            <option value="17">CV Raman Nagar</option>
+            <option value="18">Electronic City</option>
+            <option value="19">HSR</option>
+            <option value="20">Marathahalli</option>
+            <option value="21">Sarjapur Road</option>
+            <option value="22">Wilson Garden</option>
+            <option value="23">Shanti Nagar</option>
+            <option value="24">Koramangala 5th Blok</option>
+            <option value="25">Koramangala 8th Blok</option>
+            <option value="26">Richmond Road</option>
 
-        <label for="rest_type">Restaurant Type (0 to 36):</label>
-        <input type="number" id="rest_type" name="rest_type" required><br><br>
+        </select><br><br>
+
+        <label for="rest_type">Restaurant Type :</label>
+        <select id="rest_type" name="rest_type">
+    <option value="0">Casual Dining</option>
+    <option value="1">Cafe, Casual Dining</option>
+    <option value="2">Quick Bites</option>
+    <option value="3">Casual Dining, Cafe</option>
+    <option value="4">Cafe</option>
+    <option value="5">Quick Bites, Cafe</option>
+    <option value="6">Cafe, Quick Bites</option>
+    <option value="7y">Delivery</option>
+    <option value="8">Mess</option>
+    <option value="9">Dessert Parlor</option>
+    <option value="10">Bakery, Dessert Parlor</option>
+    <option value="11">Pub</option>
+    <option value="12">Bakery</option>
+    <option value="13">Takeaway, Delivery</option>
+    <option value="14">Fine Dining</option>
+    <option value="15">Beverage Shop</option>
+    <option value=16">Sweet Shop</option>
+    <option value="17">Bar</option>
+    <option value="18">Beverage Shop, Quick Bites</option>
+    <option value="19">Confectionery</option>
+    <option value="20">Quick Bites, Beverage Shop</option>
+    <option value="21">Dessert Parlor, Sweet Shop</option>
+    <option value="22">Bakery, Quick Bites</option>
+    <option value="23">Sweet Shop, Quick Bites</option>
+    <option value="24">Kiosk</option>
+    <option value="25">Food Truck</option>
+    <option value="26">Quick Bites, Dessert Parlor</option>
+    <option value="27">Beverage Shop, Dessert Parlor</option>
+    <option value="28">Takeaway</option>
+    <option value="29">Pub, Casual Dining</option>
+    <option value="30">Casual Dining, Bar</option>
+    <option value="31">Dessert Parlor, Beverage Shop</option>
+    <option value="32">Quick Bites, Bakery</option>
+    <option value="33">Dessert Parlor, Quick Bites</option>
+    <option value="34">Microbrewery, Casual Dining</option>
+</select><br><br>
 
         <label for="cuisines">Cuisines (How many):</label>
         <input type="number" step="any" id="cuisines" name="cuisines" required><br><br>
@@ -36,5 +100,6 @@
         </h5>{{prediction}}
 
     </form>
+
 </body>
 </html>
