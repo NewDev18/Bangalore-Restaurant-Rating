@@ -39,9 +39,10 @@ def predict():
     # Predicting the results
 
     result = model.predict(arr)
-    print(result)
+    rounded_result = np.round(result, decimals=1)
+    print(rounded_result)
 
-    return render_template('index.html', prediction = result)
+    return render_template('index.html', prediction = rounded_result)
 
 if __name__ == "__main__":
     app.run(debug=False,host='0.0.0.0')
