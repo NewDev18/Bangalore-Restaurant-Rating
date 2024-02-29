@@ -40,7 +40,7 @@ aource : https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants
 # Conclusion 💡
 
 - Most Restaurants offer options for online order and delivery.
-- Most restaurants don't offer table booking.
+- Most Restaurants don't offer table booking.
 - From the analysis, most of the ratings are within 3.5 and 4.5.
 - From the analysis. we can see that most of the restaurants located in 'Koramangala 5th Block' , 'BTM' & 'Indiranagar'.Then least restaurants are located 'KR Puram' , 'Kanakapura' , 'Magadi Road'. 'Casual Dining' , 'Quick Bites' , 'Cafe' ,
 - 'Dessert Parlor' are the most common types of restaurant.And 'Food Court', 'Casual Dining' ,
