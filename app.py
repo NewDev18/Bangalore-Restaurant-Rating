@@ -1,9 +1,6 @@
 from flask import Flask, request, render_template
 import pickle
 import numpy as np
-import json
-import pandas as pd
-import string
 
 app = Flask(__name__)
 
@@ -15,12 +12,9 @@ def index():
 def predict():
 
     input_data = request.form
-    
-    #with open(r'fetures_name.json','r') as file:
-    #   features_name = json.load(file)
 
-    online_order = int(input_data['online_order'])
-    book_table = int(input_data['book_table'])
+    online_order = 1 if input_data['online_order'] == 'yes' else 0
+    book_table = 1 if input_data['book_table'] == 'yes' else 0
     votes = int(input_data['votes'])
     location = int(input_data['location'])
     rest_type = int(input_data['rest_type'])

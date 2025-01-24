@@ -2,22 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Form</title>
+    <title>Restaurant Rating Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h2>Restaurant Rating Prediction</h2>
     <form action="/predict" method="post">
-        <label for="online_order">Online Order (0:Yes/1:No):</label>
-        <input type="number" id="online_order" name="online_order" required><br><br>
+        <label for="online_order">Online Order:</label>
+        <select id="online_order" name="online_order" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
 
-        <label for="book_table">Book Table (0:Yes/1:No):</label>
-        <input type="number" id="book_table" name="book_table" required><br><br>
+        <label for="book_table">Book Table:</label>
+        <select id="book_table" name="book_table" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
 
-        <label for="votes">Votes :</label>
-        <input type="number" id="votes" name="votes" required><br><br>
+        <label for="votes">Votes:</label>
+        <input type="number" id="votes" name="votes" required>
 
-        <label for="location">Location :</label>
+        <label for="location">Location:</label>
         <select id="location" name="location">
             <option value="1">Banashankari</option>
             <option value="2">Basavanagudi</option>
@@ -45,61 +83,56 @@
             <option value="24">Koramangala 5th Blok</option>
             <option value="25">Koramangala 8th Blok</option>
             <option value="26">Richmond Road</option>
+        </select>
 
-        </select><br><br>
-
-        <label for="rest_type">Restaurant Type :</label>
+        <label for="rest_type">Restaurant Type:</label>
         <select id="rest_type" name="rest_type">
-    <option value="0">Casual Dining</option>
-    <option value="1">Cafe, Casual Dining</option>
-    <option value="2">Quick Bites</option>
-    <option value="3">Casual Dining, Cafe</option>
-    <option value="4">Cafe</option>
-    <option value="5">Quick Bites, Cafe</option>
-    <option value="6">Cafe, Quick Bites</option>
-    <option value="7y">Delivery</option>
-    <option value="8">Mess</option>
-    <option value="9">Dessert Parlor</option>
-    <option value="10">Bakery, Dessert Parlor</option>
-    <option value="11">Pub</option>
-    <option value="12">Bakery</option>
-    <option value="13">Takeaway, Delivery</option>
-    <option value="14">Fine Dining</option>
-    <option value="15">Beverage Shop</option>
-    <option value=16">Sweet Shop</option>
-    <option value="17">Bar</option>
-    <option value="18">Beverage Shop, Quick Bites</option>
-    <option value="19">Confectionery</option>
-    <option value="20">Quick Bites, Beverage Shop</option>
-    <option value="21">Dessert Parlor, Sweet Shop</option>
-    <option value="22">Bakery, Quick Bites</option>
-    <option value="23">Sweet Shop, Quick Bites</option>
-    <option value="24">Kiosk</option>
-    <option value="25">Food Truck</option>
-    <option value="26">Quick Bites, Dessert Parlor</option>
-    <option value="27">Beverage Shop, Dessert Parlor</option>
-    <option value="28">Takeaway</option>
-    <option value="29">Pub, Casual Dining</option>
-    <option value="30">Casual Dining, Bar</option>
-    <option value="31">Dessert Parlor, Beverage Shop</option>
-    <option value="32">Quick Bites, Bakery</option>
-    <option value="33">Dessert Parlor, Quick Bites</option>
-    <option value="34">Microbrewery, Casual Dining</option>
-</select><br><br>
+            <option value="0">Casual Dining</option>
+            <option value="1">Cafe, Casual Dining</option>
+            <option value="2">Quick Bites</option>
+            <option value="3">Casual Dining, Cafe</option>
+            <option value="4">Cafe</option>
+            <option value="5">Quick Bites, Cafe</option>
+            <option value="6">Cafe, Quick Bites</option>
+            <option value="7">Delivery</option>
+            <option value="8">Mess</option>
+            <option value="9">Dessert Parlor</option>
+            <option value="10">Bakery, Dessert Parlor</option>
+            <option value="11">Pub</option>
+            <option value="12">Bakery</option>
+            <option value="13">Takeaway, Delivery</option>
+            <option value="14">Fine Dining</option>
+            <option value="15">Beverage Shop</option>
+            <option value="16">Sweet Shop</option>
+            <option value="17">Bar</option>
+            <option value="18">Beverage Shop, Quick Bites</option>
+            <option value="19">Confectionery</option>
+            <option value="20">Quick Bites, Beverage Shop</option>
+            <option value="21">Dessert Parlor, Sweet Shop</option>
+            <option value="22">Bakery, Quick Bites</option>
+            <option value="23">Sweet Shop, Quick Bites</option>
+            <option value="24">Kiosk</option>
+            <option value="25">Food Truck</option>
+            <option value="26">Quick Bites, Dessert Parlor</option>
+            <option value="27">Beverage Shop, Dessert Parlor</option>
+            <option value="28">Takeaway</option>
+            <option value="29">Pub, Casual Dining</option>
+            <option value="30">Casual Dining, Bar</option>
+            <option value="31">Dessert Parlor, Beverage Shop</option>
+            <option value="32">Quick Bites, Bakery</option>
+            <option value="33">Dessert Parlor, Quick Bites</option>
+            <option value="34">Microbrewery, Casual Dining</option>
+        </select>
 
-        <label for="cuisines">Cuisines (How many):</label>
-        <input type="number" step="any" id="cuisines" name="cuisines" required><br><br>
+        <label for="cuisines">Cuisines:</label>
+        <input type="number" step="any" id="cuisines" name="cuisines" required>
 
-        <label for="cost">Cost :</label>
-        <input type="number" step="any" id="cost" name="cost" required><br><br>
-        
+        <label for="cost">Cost For Two People:</label>
+        <input type="number" step="any" id="cost" name="cost" required>
+
         <input type="submit" value="Submit">
 
-        <h5>
-            Restauant rating is:
-        </h5>{{prediction}}
-
+        <h5>Restaurant Rating: {{prediction}}</h5>
     </form>
-
 </body>
 </html>
